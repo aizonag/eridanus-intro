@@ -1,6 +1,9 @@
-let currentyear = document.querySelector('#currentyear');
-let today = new Date ();
-currentyear.innerText = today.getFullYear();
+let footer = document.querySelector('#footer');
+let today = new Date();
+let currentYear = today.getFullYear();
+let copyright = document.createElement("P");
+copyright.innerHTML = "Giovana " + currentYear;
+footer.appendChild(copyright);
 
 let skills = [ 
 "Interpersonal skills",
@@ -15,12 +18,12 @@ for(let i = 0; i < skills.length; i++) {
     skill.innerText = skills[i]
     skillsList.appendChild(skill)
 };
-let messageForm = document.getElementByName ("leave_message");
+const messageForm = document.forms.leave_message;
 messageForm.addEventListener ('submit', function(event){
     event.preventDefault ();
     
 
-   let userNames = event.target.userNames.value;
+   let usersName = event.target.usersName.value;
    let usersemail = event.target.usersEmail.value;
    let usersmessage = event.target.usersMessage.value;
     
@@ -31,7 +34,8 @@ messageForm.addEventListener ('submit', function(event){
    newMessage.innerHTML =
    `<a href = "mailito: ${usersemail}">${usersName}</a>
    <span>says: ${usersmessage}</span>`;
-   
+   console.log (newMessage);
+   messageList.appendChild (newMessage);
    messageForm.reset ();
    
 })
