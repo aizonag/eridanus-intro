@@ -2,7 +2,7 @@ let footer = document.querySelector('#footer');
 let today = new Date();
 let currentYear = today.getFullYear();
 let copyright = document.createElement("P");
-copyright.innerHTML = "Giovana " + currentYear;
+copyright.innerHTML = "Giovana Aizona " + currentYear;
 footer.appendChild(copyright);
 
 let skills = [ 
@@ -42,9 +42,36 @@ messageForm.addEventListener ('submit', function(event){
 
 let removeButton = document.getElementById ("messages")
 removeButton.addEventListener ('click', function (event){
-    let button = event.target.Remove;
+    let button = event.target;
+    debugger;
     let entry = button.parentNode;
     entry.remove ();
-    removeButton.appendChild (newMessage);
-    newMessage.appendChild (messageList);
+    //removeButton.appendChild (newMessage);
+   //newMessage.appendChild (messageList);
 })
+
+fetch('https://api.github.com/users/aizonag/repos')
+.then ((response) =>{
+   return response.json();
+})
+
+.then ((response)=> { 
+    let repositories = response;
+    console.log (repositories);
+
+    let projectSection = document.getElementById ("projects");
+    console.log (projectSection);
+    let projectList = projectSection.querySelector ("ul"); 
+    console.log (projectList);
+
+    for(let i = 0; i < repositories.length; i++) {
+        let project = document.createElement("li") 
+        project.innerText = repositories[i].name
+        projectList.appendChild(project)
+    }})
+.catch((error) => {
+    console.log('ERROR', error)
+});
+
+
+
