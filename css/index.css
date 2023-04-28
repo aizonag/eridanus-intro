@@ -63,8 +63,7 @@ img {
     margin-bottom: 50px;
 }
 
-h2 {
-    text-align: left;
+h1 {
     color: #383636;
     font-family: 'Press Start 2P', cursive;
     font-size: 70px;
@@ -120,9 +119,6 @@ label {
     color: #dbd9d7;
     font-family: 'Roboto Condensed', sans-serif;
     margin: 10px;
-    color: #dbd9d7;
-    font-family: 'Roboto Condensed', sans-serif;
-    margin: 10px;
 }
 
 input {
@@ -135,33 +131,30 @@ textarea {
     padding: 15px 25px 15px 25px;
     border: 1px solid #dbd9d7;
     margin: 20px;
-    margin: 20px;
 }
-
 
 button {
     color: #dbd9d7;
-    margin: 5px;
     margin: 5px;
     font-family: Helvetica;
     background: #565557;
     border-radius: 10px;
 }
 
-.footer-col .social-links a {
+.connect-col .social-links a {
     display: inline-block;
     height: 60px;
     width: 60px;
     background-color: #383636;
     margin: 0, 25px, 10px, 0;
-    text-align: center;
+    text-align: center; 
     line-height: 60px;
     border-radius: 50px;
     color: #fff;
     transition: all 0.5s ease;
 }
 
-.footer-col .social-links a:hover {
+.connect-col .social-links a:hover {
     color: #333;
     background-color: #fff;
 }
