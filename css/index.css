@@ -63,7 +63,8 @@ img {
     margin-bottom: 50px;
 }
 
-h1 {
+h2 {
+    text-align: left;
     color: #383636;
     font-family: 'Press Start 2P', cursive;
     font-size: 70px;
@@ -119,6 +120,9 @@ label {
     color: #dbd9d7;
     font-family: 'Roboto Condensed', sans-serif;
     margin: 10px;
+    color: #dbd9d7;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 10px;
 }
 
 input {
@@ -131,10 +135,13 @@ textarea {
     padding: 15px 25px 15px 25px;
     border: 1px solid #dbd9d7;
     margin: 20px;
+    margin: 20px;
 }
+
 
 button {
     color: #dbd9d7;
+    margin: 5px;
     margin: 5px;
     font-family: Helvetica;
     background: #565557;
