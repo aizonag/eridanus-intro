@@ -2,7 +2,7 @@ let footer = document.querySelector('#footer');
 let today = new Date();
 let currentYear = today.getFullYear();
 let copyright = document.createElement("P");
-copyright.innerHTML = "Giovana Aizona " + currentYear;
+copyright.innerHTML = "Giovana Aizona " + "&copy " + currentYear;
 footer.appendChild(copyright);
 
 let skills = [
@@ -41,33 +41,34 @@ messageForm.addEventListener ('submit', function(event){
    removeButton.innerText = "Remove";
    newMessage.appendChild(removeButton);
    removeButton.addEventListener('click', (event) => {
-	const entry = event.target.parentNode;
-	entry.remove();
+    const entry = event.target.parentNode;
+    entry.remove();
    });
 
    messageForm.reset();
 
 })
 
-let githubRequest = new XMLHttpRequest ();
 
-githubRequest.open ("GET", "https://api.github.com/users/aizonag/repos")
+fetch('https://api.github.com/users/aizonag/repos')
+.then ((response) =>{
+   return response.json();
+})
 
-githubRequest.send();
-
-githubRequest.addEventListener ("load", function (){
-    let repositories = JSON.parse(this.response);
+.then ((response)=> {
+    let repositories = response;
     console.log (repositories);
 
-let projectSection = document.getElementById ("projects");
-console.log (projectSection);
-let projectList = projectSection.querySelector ("ul"); 
-console.log (projectList);
+    let projectSection = document.getElementById ("projects");
+    console.log (projectSection);
+    let projectList = projectSection.querySelector ("ul");
+    console.log (projectList);
 
-for(let i = 0; i < repositories.length; i++) {
-    let project =document.createElement("li") 
-    project.innerText = repositories[i].name
-    projectList.appendChild(project)
-}
-})
- 
+    for(let i = 0; i < repositories.length; i++) {
+        let project = document.createElement("li")
+        project.innerText = repositories[i].name
+        projectList.appendChild(project)
+    }})
+.catch((error) => {
+    console.log('ERROR', error)
+});
