@@ -227,7 +227,15 @@ form {
     font-size: 20px;
     color: #f2efed;
 }
+@media (max-width: 1200px) {
+    img {
+        max-width: 200px;
+        margin-top: 10px;
+        margin-left: 150px;
+        margin-bottom: 50px;
+    }
 
+}
 @media (max-width: 952px) {
     label.logo {
         font-size: 20px;
@@ -236,6 +244,13 @@ form {
 
     nav ul li a {
         font-size: 16px;
+    }
+
+    img {
+        max-width: 200px;
+        margin-top: 10px;
+        margin-left: 150px;
+        margin-bottom: 50px;
     }
 }
 
@@ -289,17 +304,24 @@ form {
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
     h1 {
         font-size: 30px;
-        
     }
 
     img {
         max-width: 100px;
         margin-top: 10px;
-        margin-left: 50px;
+        margin-left: 10px;
         margin-bottom: 50px;
-
+    }
+    p {
+        font-size: 15px;
+    }
+   #skills li {
+        font-size: 15px;
+    }
+    li {
+        font-size: 15px;
     }
 }
