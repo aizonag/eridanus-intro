@@ -1,66 +1,91 @@
 <!DOCTYPE html>
-<html> 
-<head> 
+<html>
+<head>
     <meta charset="UTF-8">
     <title> Giovana </title>
     <meta name= "description" content= "Portfolio">
     <meta name="keywords" content="JavaScript, Portfolio, Code the Dream, Giovana Aizona">
     <meta name= "author" content= "Giovana Aizona">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="css/index.css" /> 
-
+<link href="css/index.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Condensed:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://fontawesome.com/search?q=bars&c=coding&o=r"></script>
 </head>
-
 <body>
-
-    <h1>ABOUT</h1>
-    <p>Graduated in geology and in the process of changing careers, living in Dallas - Texas </p>
-    <h1>EXPERIENCE</h1>
-    <div class="styleblock">
-    <p>Working in the Code the Dream project</p>
-    </div>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Giovana S. Aizona</label>
+    <ul>
+        <li><a class="active" href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#connect">Connect</a></li>
+     </ul>
+    </nav>
+<div class="container">
+<h1> GIOVANA AIZONA </h1>
+<img src="Photokako-polaroid-nK592SNYGlTLyb8h.png" alt="Giovana photo">
+</div>
+<div class= "lines">
+</div>
+    <section id ="about">
+    <h2>[ABOUT]</h2>
+    <p>
+    I have a degree in geology and I am currently in the process of changing careers by adventuring into the world of coding. I am a hard working, honest and motivated person. I am always willing to learn new skills.
+    I am able to work independently in busy environments and also within a team setting. I am flexible, reliable and I am always up for new challenges. </p>
+    <p><strong>Pronouns: </strong>she/her and they/them.</p>
+    </section>
+    <section id ="experience">
+    <h2>[EXPERIENCE]</h2>
+    <p>Current student at the Code the Dream project. Studying introduction to programming in Javascript.</p>
+    </section>
     <section id ="skills">
-        <h2> Skills </h2>
-        <div class="styleblock2">
-        <ul>
-        </ul>
+    <h3> [SKILLS] </h3>
+    <ul>
+    </ul>
     </div>
     </section>
-    <h1>CONNECT</h1>
-    <ul> 
-   <li> <p>giovana.s.aizona@gmail.com</p> </li> 
-   <li> <p>https://github.com/aizonag</p> </li>
-</ul>
-
+    <section id="projects">
+        <h3>[PROJECTS] </h3>
+        <ul>
+        </ul>
+        </section>
+    <section id="connect">
+    <h2>[CONNECT]</h2>
+    <div class="footer-col">
+            <div class="social-links">
+                <a href="https://br.linkedin.com/in/giovana-aizona-40a23619a"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/aizonag/"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/aizonag"><i class="fab fa-github"></i></a>
+            </div>
+                <ul>  </ul>
+    </div>
+</section>
 <section>
-    <h2>Leave a message</h2>
+    <h3>[LEAVE A MESSAGE]</h3>
     <form name="leave_message">
-        <label> Name </label> 
+        <label> Name </label>
         <br> <input type="text", name="usersName", required="true"> </br>
         <label> Email </label>
-        <br> <input type="email", name="usersName", required="true"> </br>
+        <br> <input type="email", name="usersEmail", required="true"> </br>
         <label> Message </label>
-        <br> <textarea name="usersName", required="true"></textarea> </br>
+        <br> <textarea name="usersMessage", required="true"></textarea> </br>
         <br> <button type="submit">Submit</button> </br>
     </form>
 </section>
-
 <section id="messages">
-<h2> Messages</h2>
-<button type="button">Remove</button> 
-<div class="styleblock3">
+<h2>[MESSAGES] </h2>
 <ul></ul>
-</div>
 </section>
-<footer> 
-    <div class="container"> 
-        <div class="text"> 
-            <p> &copy copyright <span id="currentYear">2023</span> Giovana 
-            </p>
-        </div>
-    </div>
-     
+<footer id="footer">
 </footer>
-<script type="text/javascript" src="./js/index.js"></script>
+<script src="./js/index.js" type="text/JavaScript"></script>
 </body>
  </html>

@@ -1,59 +1,124 @@
-
 body {
     background-color: #ffc100;
-}
-p {
-    display: inline;
-    color: #383636;
-    font-size: 20px;
-    margin: 10px 10px 10px 10px;
 
+}
+
+nav {
+    background:#383636;
+    height: 80px;
+    width: 100%;
+}
+
+label.logo {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    line-height: 80px;
+    padding: 0 30px;
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+    background: #565557;
+    transition: .5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+img {
+    margin-top: 10px;
+    margin-left: 520px;
+    margin-bottom: 50px;
 }
 
 h1 {
     color: #383636;
-    font-family: Helvetica;
-    font-weight: 900;
-    margin: 35px 450px 35px 480px;
-    padding: 15px 25px 15px 25px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 70px;
+    margin-left: 30px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.lines {
+    content: '';
+    height: 2px;
+    margin: auto;
+    border-top: 5px dotted #383636;
+}
+
+p {
+    font-family: 'Roboto Condensed', sans-serif;
+    text-align: justify;
+    color: #383636;
+    font-size: 20px;
+    margin: 10px 0px 10px 10px;
+
 }
 
 h2 {
+    text-align: left;
     color: #383636;
-    font-family: Helvetica;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 800;
+    margin: 40px 50px 20px 0px;
+    padding: 0px;
+}
+
+h3 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: left;
+    color: #383636;
     font-weight: 500;
-    margin: 35px 450px 35px 480px;
-    padding: 15px 25px 15px 25px;
+    margin: 35px 30px 20px 0px;
+    padding: 0px;
+}
+
+li {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #383636;
+    font-size: 20px;
 }
 
 label {
-    color: #383636;
-
-}
-
-.styleblock {
-    max-width: 600px;
-    margin: 10px 30px;
-    padding: 25px;
-    background: #f2efed;
-    border: 1px solid #dbd9d7;
-    color: #383636;
-    box-sizing: border-box:border-box
-
-}
-.styleblock2 {
-    max-width: 600px;
-    margin: 10px 30px;
-    padding: 25px;
-    background: #f2efed;
-    border: 1px solid #dbd9d7;
-    color: #383636;
-    box-sizing: border-box:border-box;
-}
-
-label {
-    color: #383636;
-    font-family: Helvetica;
+    color: #dbd9d7;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 10px;
 }
 
 input {
@@ -65,24 +130,176 @@ input {
 textarea {
     padding: 15px 25px 15px 25px;
     border: 1px solid #dbd9d7;
-    margin: 10px;
-}
-button {
-    color: #dbd9d7;
-    font-family: Helvetica;
-    background: #383636
+    margin: 20px;
 }
 
-.styleblock3 {
-    max-width: 600px;
-    padding: 10px;
-    background: #f2efed;
-    border: 1px solid #dbd9d7;
-    color: #383636;
-    box-sizing: border-box:border-box;
+button {
+    color: #dbd9d7;
+    margin: 5px;
+    font-family: Helvetica;
+    background: #565557;
+    border-radius: 10px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    background-color: #383636;
+    margin: 0, 25px, 10px, 0;
+    text-align: center;
+    line-height: 60px;
+    border-radius: 50px;
+    color: #fff;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #333;
+    background-color: #fff;
 }
 
 footer {
-    background: #757372;
-    color: #383636;
+    background: #383636;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;
+    position: relative;
+    height: 100%;
+    margin-bottom: -100px;
+    clear: both;
+    padding-top: 28px;
+    padding-bottom: 28px;
+
+}
+
+#footer p {
+    color: #f2efed;
+    margin: 25px, 25px, 25px, 100px;
+}
+
+#skills ul {
+    background: #383636;
+    margin: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+#skills li {
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #565557;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #f2efed;
+}
+
+form {
+    background: #383636;
+    margin: 20px;
+    display: grid;
+    border-radius: 10px;
+}
+
+#messages ul {
+    background: #383636;
+    margin: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 15px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    justify-content: center;
+}
+
+#messages li {
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #565557;
+    border-radius: 10px;
+    font-size: 20px;
+    color: #f2efed;
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 20px;
+        padding-left: 50px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    h1 {
+        font-size: 30px;
+        
+    }
+
+    img {
+        max-width: 100px;
+        margin-top: 10px;
+        margin-left: 100px;
+        margin-bottom: 50px;
+
+    }
+
+    .checkbtn {
+        display: block;
+    }
+
+    nav ul {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background: #383636;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    a:hover,
+    a.active {
+        background: none;
+        color: #565557;
+    }
+
+    #check:checked~ul {
+        left: 0;
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 30px;
+        
+    }
+
+    img {
+        max-width: 100px;
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-bottom: 50px;
+
+    }
 }
